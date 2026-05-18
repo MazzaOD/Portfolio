@@ -1,0 +1,321 @@
+:root {
+  --bg: #0a192f;
+  --bg-alt: #07101f;
+  --card: rgba(17, 34, 64, 0.6);
+  --text: #ccd6f6;
+  --accent: #64ffda;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+body.light {
+  --bg: #f5f7fb;
+  --bg-alt: #eaeef5;
+  --card: rgba(255, 255, 255, 0.7);
+  --text: #222;
+}
+
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: linear-gradient(180deg, var(--bg), var(--bg-alt));
+  color: var(--text);
+  transition: all 0.3s ease;
+}
+
+
+
+/* NAV */
+.top-nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.2rem;
+  padding: 1rem 0;   /* ✅ aligns with container */
+  backdrop-filter: blur(12px);
+  background: rgba(10, 25, 47, 0.6);
+  border-bottom: 1px solid var(--border);
+}
+
+
+.top-nav a, #themeToggle {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.85rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+
+  padding: 4rem 0 3rem;   /* ✅ matches section spacing */
+}
+
+.hero-content {
+  max-width: 520px;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+}
+
+.hero-copy {
+  margin-top: 1rem;
+  opacity: 0.85;
+}
+
+.status {
+  margin-top: 1rem;
+  color: var(--accent);
+}
+
+.hero-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+  pointer-events: none;
+}
+
+
+/* BUTTONS */
+.button {
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.button.primary {
+  background: var(--accent);
+  color: black;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.hero-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 12px;         /* slightly bigger gap */
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.card {
+  background: rgba(17, 34, 64, 0.9);   /* 🔥 stronger contrast */
+  backdrop-filter: blur(12px);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem 0;   /* ✅ cleaner spacing (not all sides) */
+  border: 1px solid rgba(100,255,218,0.1);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  transition: 0.2s;
+}
+
+.profile-img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 20px;
+
+  display: block;
+  margin: auto;
+
+  border: 2px solid rgba(100, 255, 218, 0.3);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+.profile-img:hover {
+  transform: scale(1.03);
+}
+
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+main {
+  margin-top: 1rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+
+
+/* PROJECT */
+.project {
+  background: var(--bg);
+  padding: 1rem;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+}
+
+.hero-visual {
+  display: flex;
+  align-items: center;     /* ✅ vertical centring */
+  justify-content: center;
+
+  height: 100%;            /* ✅ match hero height */
+  padding: 2rem;
+
+  border-radius: 20px;
+  background: radial-gradient(
+      circle at center,
+      rgba(100,255,218,0.18),
+      rgba(10,25,47,0.9)
+  );
+}
+
+
+.app-shell {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;    /* ✅ consistent spacing */
+}
+
+p {
+  line-height: 1.6;
+  max-width: 60ch;   /* ✅ PERFECT reading width */
+}
+
+/* ✨ Animated background glow */
+body::before {
+  content: "";
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  top: -150px;
+  right: -100px;
+  background: radial-gradient(circle, rgba(100,255,218,0.12), transparent);
+  filter: blur(80px);
+  z-index: 0;              /* ✅ FIXED */
+  pointer-events: none;    /* ✅ prevents blocking clicks */
+}
+
+
+
+@keyframes floatGlow {
+  from { transform: translateY(0px); }
+  to { transform: translateY(40px); }
+}
+
+/* ✨ Glowing orb effect */
+.glow-orb {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: auto;
+  background: radial-gradient(circle, #64ffda, transparent 70%);
+  filter: blur(40px);
+  animation: pulse 4s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%,100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.2); opacity: 1; }
+}
+
+/* ✨ Navbar hover underline animation */
+.top-nav a {
+  position: relative;
+}
+
+.top-nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  bottom: -4px;
+  left: 0;
+  background: var(--accent);
+  transition: width 0.3s;
+}
+
+.top-nav a:hover::after {
+  width: 100%;
+}
+
+.card {
+  background: rgba(17, 34, 64, 0.9);
+  border-radius: 10px;
+  padding: 2rem;
+
+  max-width: 850px;     /* ✅ key fix */
+  margin: 2rem auto;    /* ✅ centres it */
+
+  border: 1px solid rgba(100,255,218,0.1);
+}
+
+/* ✨ Smoother fade-in */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ✨ Better spacing */
+h1 {
+  letter-spacing: -1px;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+main > section:first-child {
+  padding-top: 2rem;   /* tighter top */
+}
