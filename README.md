@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Portfolio Website
 
 A static HTML/CSS portfolio website that works without npm or build tools.
@@ -16,3 +17,7 @@ A static HTML/CSS portfolio website that works without npm or build tools.
 
 - No `npm install` is required.
 - This project is ready to host as a static site on GitHub Pages or any file server.
+=======
+# Portfolio
+Repo for my portfolio website
+>>>>>>> f82d768ace3cacf6c24df43cfbc5e15a0c763a5d
