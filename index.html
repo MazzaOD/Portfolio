@@ -2,153 +2,465 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mary O'Donnell | Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script defer src="script.js"></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="/Portfolio/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/Portfolio/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/Portfolio/favicon-16x16.png">
-    <link rel="manifest" href="/Portfolio/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Mary O'Donnell | Technical Support & DevOps Portfolio</title>
+
+    <link rel="apple-touch-icon" sizes="180x180el="icon" type="image/png" sizes="32x32" href="/Portfolio/favicon-"16x16" href="/Portfolio/favicon-16x.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+ scroll-behavior: smooth;
+        }
+
+        body {
+            background:
+                radial-gradient(circle at top,
+                    #162036,
+                    #0d1117 60%);
+            color: #f0f6fc;
+            font-family: 'Rajdhani', sans-serif;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 25px 0;
+        }
+
+        nav a {
+            color: #f0f6fc;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #00ff88;
+        }
+
+        .dashboard-title {
+            font-family: 'Audiowide', sans-serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 1.2rem;
+        }
+
+        .status-bar {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .green {
+            color: #00ff88;
+        }
+
+        .blue {
+            color: #58a6ff;
+        }
+
+        .orange {
+            color: #ffb347;
+        }
+
+        .red {
+            color: #ff5c5c;
+        }
+
+        .hero-buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 8px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .btn-primary {
+            background: #00ff88;
+            color: #000;
+        }
+
+        .btn-secondary {
+            border: 1px solid #00ff88;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            font-family: 'Audiowide', sans-serif;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            gap: 25px;
+        }
+
+        .metrics-grid {
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+
+        .skills-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .projects-grid {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .card {
+            background: linear-gradient(
+                135deg,
+                #161b22,
+                #1f2937
+            );
+
+            border: 1px solid #30363d;
+            border-radius: 22px;
+
+            padding: 25px;
+
+            box-shadow:
+                0 8px 30px rgba(0,0,0,.5);
+
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .metric {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .featured-project img {
+            width: 100%;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 50px;
+            background: #0d1117;
+            border: 1px solid #30363d;
+            margin: 4px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #8b949e;
+        }
+
+        @media(max-width:768px) {
+
+            .dashboard-title {
+                font-size: 2.2rem;
+            }
+
+            nav {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="app-shell">
 
-        <!-- ✅ NAV (moved outside hero) -->
-        <header>
-            <nav class="top-nav">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-                <button id="themeToggle">🌙</button>
-            </nav>
+    <div class="container">
 
-            <!-- ✅ HERO -->
-            <div class="hero">
+        <nav>
+            #aboutAbout</a>
+            #metricsMetrics</a>
+            <a illsSkills</a>
+            <a href=sProjects</a>
+            <a href="#focus">Focus</a>
+ <a href="#contacta>
+        </nav>
 
-                <div class="hero-content">
-                    <p class="eyebrow">Technical Support Technician</p>
+        <section class="hero">
 
-                    <!--  TYPING EFFECT -->
-                    <h1><span id="typing"></span></h1>
+            <div class="status-bar">
+                <span class="green">🟢 OPEN TO OPPORTUNITIES</span>
+                |
+                ☁ Microsoft 365
+                |
+                ⚡ PowerShell
+                |
+                🖥 Infrastructure
+                |
+                🚀 DevOps Learning
+            </div>
 
-                    <p class="hero-copy fade-in">
-                        Technical Support Technician with experience in troubleshooting, system maintenance,
-                        and supporting users across Microsoft 365 environments. Passionate about
-                        delivering reliable IT solutions and improving user experience.
-                    </p>
+            <h1 class="dashboard-title">
+                Mary O'Donnell
+            </h1>
 
-                    <p class="status">Available for new opportunities</p>
+            <p>
+                Technical Support Technician with a passion for automation,
+                Microsoft 365 administration, infrastructure monitoring,
+                PowerShell development and DevOps technologies.
+            </p>
 
-                    <div class="hero-actions">
-                        <a href="#projects" class="button primary">View Projects</a>
-                        <a href="#contact" class="button">Contact Me</a>
-                        <a href="cv.pdf" class="button" download>Download CV</a>
-                    </div>
+            <div class="hero-buttons">
+                #projectsView Projects</a>
+                <a href="cv.pdf" download class="btn btn-secondary">Download CV</a>
+            </div>
+
+        </section>
+
+        <section id="metrics" class="section">
+
+            <h2 class="section-title">Key Metrics</h2>
+
+            <div class="grid metrics-grid">
+
+                <div class="card">
+                    <div class="metric green">500+</div>
+                    <h3>Support Issues Resolved</h3>
                 </div>
 
-                <!-- 🔥 PREMIUM VISUAL -->
-                <div class="hero-visual">
-                    <img src="images/profile.jpg" alt="Profile photo" class="profile-img" />
+                <div class="card">
+                    <div class="metric blue">20+</div>
+                    <h3>Automation Scripts</h3>
                 </div>
 
+                <div class="card">
+                    <div class="metric orange">1000+</div>
+                    <h3>Users Supported</h3>
+                </div>
+
+                <div class="card">
+                    <div class="metric green">15+</div>
+                    <h3>Technical Projects</h3>
+                </div>
 
             </div>
 
-        </header>
+        </section>
 
-        <main>
+        <section id="about" class="section">
 
-            <!-- ABOUT -->
-            <section id="about" class="section card fade-in">
-                <h2>About</h2>
+            <h2 class="section-title">About Me</h2>
+
+            <div class="card">
+                <p>
+                    I am an IT Support professional experienced in troubleshooting,
+                    Microsoft 365 administration, infrastructure support,
+                    networking and automation.
+
+                    My current focus is expanding my DevOps skillset through
+                    dashboard development, monitoring solutions, containerisation,
+                    cloud services and scripting.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="section">
+
+            <h2 class="section-title">Featured Project</h2>
+
+            <div class="card featured-project">
+
+                <h3>Infrastructure Monitoring Dashboard</h3>
 
                 <p>
-                    I am an IT support professional with hands-on experience in diagnosing technical issues,
-                    maintaining systems, and assisting users in fast-paced environments.
-                    I am particularly interested in infrastructure, networking, and cloud technologies.
+                    Real-time monitoring dashboard inspired by enterprise
+                    DevOps tooling. Tracks system health, ticketing metrics,
+                    container status, resource utilisation and operational KPIs.
                 </p>
 
+                images/dashboard-preview.png
 
-            </section>
-
-            <!-- SKILLS -->
-            <section id="skills" class="section card fade-in">
-                <h2>Skills</h2>
-                <div class="grid">
-                    <article>
-                        <h3>Infrastructure</h3>
-                        <p>Windows, Active Directory, networking</p>
-                    </article>
-
-                    <article>
-                        <h3>Troubleshooting</h3>
-                        <p>Diagnostics, ticketing systems, remote support</p>
-                    </article>
-
-                    <article>
-                        <h3>Tools</h3>
-                        <p>Microsoft 365, Azure, PowerShell</p>
-                    </article>
+                <div>
+                    <span class="tag">Python</span>
+                    <span class="tag">FastAPI</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">Bootstrap</span>
+                    <span class="tag">Chart.js</span>
+                    <span class="tag">Monitoring</span>
                 </div>
-            </section>
 
-            <!-- EXPERIENCE -->
-            <section id="experience" class="section card fade-in">
-                <h2>Experience</h2>
-                <article>
-                    <h3>Technical Support Technician</h3>
+            </div>
+
+        </section>
+
+        <section id="skills" class="section">
+
+            <h2 class="section-title">Technology Stack</h2>
+
+            <div class="grid skills-grid">
+
+                <div class="card">
+                    <h3>☁ Cloud</h3>
+                    <p>Microsoft 365</p>
+                    <p>Azure</p>
+                    <p>Entra ID</p>
+                </div>
+
+                <div class="card">
+                    <h3>⚡ Automation</h3>
+                    <p>PowerShell</p>
+                    <p>Python</p>
+                    <p>GitHub Actions</p>
+                </div>
+
+                <div class="card">
+                    <h3>🖥 Infrastructure</h3>
+                    <p>Windows Server</p>
+                    <p>Active Directory</p>
+                    <p>DNS / DHCP</p>
+                </div>
+
+                <div class="card">
+                    <h3>📡 Networking</h3>
+                    <p>TCP/IP</p>
+                    <p>VPN</p>
+                    <p>Troubleshooting</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="projects" class="section">
+
+            <h2 class="section-title">Projects</h2>
+
+            <div class="grid projects-grid">
+
+                <div class="card">
+                    <h3>Infrastructure Monitoring Dashboard</h3>
                     <p>
-                        Provided system support, resolved issues, and maintained IT infrastructure.
+                        Real-time monitoring and metrics platform.
                     </p>
-                </article>
-            </section>
-
-            <!-- PROJECTS -->
-            <section id="projects" class="section card fade-in">
-                <h2>Projects</h2>
-                <div class="grid">
-
-                    <article class="project">
-                        <h3>IT Ticket System</h3>
-                        <p>Improved support tracking and issue resolution workflow.</p>
-                        <a href="#">GitHub</a>
-                    </article>
-
-                    <article class="project">
-                        <h3>Network Lab</h3>
-                        <p>Diagnosed and resolved simulated network issues.</p>
-                        <a href="#">GitHub</a>
-                    </article>
-
-                    <article class="project">
-                        <h3>Portfolio Website</h3>
-                        <p>Responsive portfolio built with HTML & CSS.</p>
-                        <a href="#">Live Site</a>
-                    </article>
-
                 </div>
-            </section>
 
-            <!-- CONTACT -->
-            <section id="contact" class="section card fade-in">
-                <h2>Contact</h2>
+                <div class="card">
+                    <h3>Network Lab</h3>
+                    <p>
+                        Simulated troubleshooting and infrastructure environment.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>PowerShell Automation</h3>
+                    <p>
+                        Scripts designed to automate repetitive support tasks.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Portfolio Website</h3>
+                    <p>
+                        Personal portfolio designed using dashboard concepts.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="focus" class="section">
+
+            <h2 class="section-title">Current Focus</h2>
+
+            <div class="card">
+
+                <ul>
+                    <li>🟢 Microsoft 365 Administration</li>
+                    <li>🟢 Azure Fundamentals</li>
+                    <li>🟢 PowerShell Automation</li>
+                    <li>🟢 DevOps Tooling</li>
+                    <li>🟢 Infrastructure Monitoring</li>
+                    <li>🟢 Cloud Technologies</li>
+                </ul>
+
+            </div>
+
+        </section>
+
+        <section id="contact" class="section">
+
+            <h2 class="section-title">Contact</h2>
+
+            <div class="card">
+
                 <p>Email: mary-birdy@hotmail.com</p>
-                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-            </section>
 
-        </main>
+                <br>
+
+                <a href="https://linkedin.com" class="btn btn-primary">
+                    LinkedIn
+                </a>
+
+                https://github.com
+                    GitHub
+                </a>
+
+            </div>
+
+        </section>
 
         <footer>
-            <p>© 2026 Mary O'Donnell</p>
+            © 2026 Mary O'Donnell
         </footer>
 
     </div>
+
 </body>
 
 </html>
