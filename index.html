@@ -7,18 +7,18 @@
 
     <title>Mary O'Donnell | Technical Support & DevOps Portfolio</title>
 
-    <link rel="apple-touch-icon" sizes="180x180el="icon" type="image/png" sizes="32x32" href="/Portfolio/favicon-"16x16" href="/Portfolio/favicon-16x.googleapis.com">
+    <link rel="apple-touch-icon" sizes="180x180el=" icon" type="image/png" sizes="32x32" href="/Portfolio/favicon-"
+        16x16" href="/Portfolio/favicon-16x.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
         html {
             scroll-behavior: smooth;
         }
-        
+
 
         body {
             background:
@@ -31,9 +31,17 @@
         }
 
         .container {
-            width: 90%;
-            max-width: 1400px;
-            margin: auto;
+            width: min(1100px, 92%);
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            margin-bottom: 2rem;
+            text-align: center;
         }
 
         nav {
@@ -61,13 +69,25 @@
 
         .hero {
             text-align: center;
-            padding: 60px 0;
+            padding: 6rem 0;
         }
 
-        .hero p {
-            max-width: 800px;
-            margin: auto;
-            font-size: 1.2rem;
+        .hero h1 {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-family: 'Audiowide', sans-serif;
+            margin: 1rem 0;
+        }
+
+        .tagline {
+            color: #58a6ff;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-text {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
         }
 
         .status-bar {
@@ -151,11 +171,9 @@
         }
 
         .card {
-            background: linear-gradient(
-                135deg,
-                #161b22,
-                #1f2937
-            );
+            background: linear-gradient(135deg,
+                    #161b22,
+                    #1f2937);
 
             border: 1px solid #30363d;
             border-radius: 22px;
@@ -163,7 +181,7 @@
             padding: 25px;
 
             box-shadow:
-                0 8px 30px rgba(0,0,0,.5);
+                0 8px 30px rgba(0, 0, 0, .5);
 
             transition: .3s;
         }
@@ -224,41 +242,47 @@
     <div class="container">
 
         <nav>
-            #aboutAbout</a>
-            #metricsMetrics</a>
-            <a illsSkills</a>
-            <a href=sProjects</a>
+            <a href="#about">About</a>
+            <a href="#metrics">Metrics</a>
+            <a href=#skills>Skills</a>
+            <a href=#projects>Projects</a>
             <a href="#focus">Focus</a>
- <a href="#contacta>
+            <a href="#contact">Contact</a>
         </nav>
 
         <section class="hero">
 
             <div class="status-bar">
-                <span class="green">🟢 OPEN TO OPPORTUNITIES</span>
+                <span class="green">● Open To Opportunities</span>
                 |
-                ☁ Microsoft 365
+                Microsoft 365
                 |
-                ⚡ PowerShell
+                Azure
                 |
-                🖥 Infrastructure
+                PowerShell
                 |
-                🚀 DevOps Learning
+                Infrastructure
             </div>
 
-            <h1 class="dashboard-title">
-                Mary O'Donnell
-            </h1>
+            <h1>Mary O'Donnell</h1>
 
-            <p>
-                Technical Support Technician with a passion for automation,
-                Microsoft 365 administration, infrastructure monitoring,
-                PowerShell development and DevOps technologies.
+            <p class="tagline">
+                Technical Support Engineer • Microsoft 365 • Automation • DevOps
+            </p>
+
+            <p class="hero-text">
+                Experienced Technical Support professional with a passion for
+                cloud technologies, automation, infrastructure monitoring and
+                modern DevOps practices.
             </p>
 
             <div class="hero-buttons">
-                #projectsView Projects</a>
-                <a href="cv.pdf" download class="btn btn-secondary">Download CV</a>
+                <a href="#projects" class=" btn btn-primary">
+                    View Projects
+                </a>
+                <a href="cv.pdf" class="btn btn-secondary">
+                    Download CV
+                </a>
             </div>
 
         </section>
@@ -325,7 +349,7 @@
                     container status, resource utilisation and operational KPIs.
                 </p>
 
-                images/dashboard-preview.png
+                <img src="images/dashboard-preview.png" alt="Dashboard Preview">
 
                 <div>
                     <span class="tag">Python</span>
@@ -445,12 +469,12 @@
 
                 <br>
 
-                <a href="https://linkedin.com" class="btn btn-primary">
+                <a href="https://linkedin.com/in/mary-o'donnell" class="btn btn-primary">
                     LinkedIn
                 </a>
 
-                https://github.com
-                    GitHub
+                <a href="https://github.com/MazzaOD" class="btn btn-primary">
+                GitHub
                 </a>
 
             </div>
